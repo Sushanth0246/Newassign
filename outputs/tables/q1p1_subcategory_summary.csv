@@ -1,0 +1,18 @@
+Category,Sub-Category,line_items,total_sales,total_profit,profit_margin_pct,loss_making_items_pct
+Furniture,Tables,17,22614,-4011,-17.74,64.7
+Electronics,Electronic Games,79,39168,-1236,-3.16,50.6
+Clothing,Saree,210,53511,352,0.66,46.7
+Furniture,Chairs,74,34222,577,1.69,52.7
+Electronics,Phones,83,46119,2207,4.79,49.4
+Clothing,Kurti,47,3361,181,5.39,29.8
+Furniture,Furnishings,73,13484,844,6.26,41.1
+Furniture,Bookcases,79,56861,4888,8.6,27.8
+Clothing,Trousers,39,30039,2847,9.48,38.5
+Electronics,Printers,74,58252,5964,10.24,33.8
+Clothing,Skirt,64,1946,235,12.08,28.1
+Clothing,Leggings,53,2106,260,12.35,30.2
+Clothing,Stole,192,18546,2559,13.8,27.1
+Clothing,Hankerchief,198,14608,2098,14.36,21.2
+Clothing,Shirt,69,7555,1131,14.97,17.4
+Electronics,Accessories,72,21728,3559,16.38,22.2
+Clothing,T-shirt,77,7382,1500,20.32,15.6

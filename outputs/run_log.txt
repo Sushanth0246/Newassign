@@ -1,0 +1,171 @@
+--- data checks ---
+orders: 500 | unique order ids: 500
+line items: 1500 | duplicate rows: 0
+line items with no matching order: 0
+loss-making line items: 33.5%
+orders where City=Delhi but State!=Delhi: 3 (kept as in source)
+
+=== Part 1: category summary ===
+             orders  line_items  total_sales  total_profit  avg_profit_per_order  profit_margin_pct  avg_order_value  loss_making_items_pct
+Category                                                                                                                                   
+Clothing        393         949       139054         11163                 28.40               8.03           353.83                   29.4
+Electronics     204         308       165267         10494                 51.44               6.35           810.13                   39.6
+Furniture       186         243       127181          2298                 12.35               1.81           683.77                   42.0
+
+Sub-category margins (worst first):
+                              line_items  total_sales  total_profit  profit_margin_pct  loss_making_items_pct
+Category    Sub-Category                                                                                     
+Furniture   Tables                    17        22614         -4011             -17.74                   64.7
+Electronics Electronic Games          79        39168         -1236              -3.16                   50.6
+Clothing    Saree                    210        53511           352               0.66                   46.7
+Furniture   Chairs                    74        34222           577               1.69                   52.7
+Electronics Phones                    83        46119          2207               4.79                   49.4
+Clothing    Kurti                     47         3361           181               5.39                   29.8
+Furniture   Furnishings               73        13484           844               6.26                   41.1
+            Bookcases                 79        56861          4888               8.60                   27.8
+Clothing    Trousers                  39        30039          2847               9.48                   38.5
+Electronics Printers                  74        58252          5964              10.24                   33.8
+Clothing    Skirt                     64         1946           235              12.08                   28.1
+            Leggings                  53         2106           260              12.35                   30.2
+            Stole                    192        18546          2559              13.80                   27.1
+            Hankerchief              198        14608          2098              14.36                   21.2
+            Shirt                     69         7555          1131              14.97                   17.4
+Electronics Accessories               72        21728          3559              16.38                   22.2
+Clothing    T-shirt                   77         7382          1500              20.32                   15.6
+
+Furniture margin without Tables: 6.03%
+Clothing margin without Saree:   12.64%
+Electronics margin w/o E-Games:  9.30%
+
+=== Part 2: Furniture targets ===
+         Category  Target  target_mom_pct  actual_sales  actual_mom_pct  attainment_pct   gap  big_target_move
+Month                                                                                                         
+Apr-18  Furniture   10400             NaN          8121             NaN            78.1 -2279            False
+May-18  Furniture   10500            0.96          6220           -23.4            59.2 -4280            False
+Jun-18  Furniture   10600            0.95          5532           -11.1            52.2 -5068            False
+Jul-18  Furniture   10800            1.89          3483           -37.0            32.2 -7317             True
+Aug-18  Furniture   10900            0.93          9538           173.8            87.5 -1362            False
+Sep-18  Furniture   11000            0.92          8704            -8.7            79.1 -2296            False
+Oct-18  Furniture   11100            0.91          6766           -22.3            61.0 -4334            False
+Nov-18  Furniture   11300            1.80         15165           124.1           134.2  3865             True
+Dec-18  Furniture   11400            0.88          9474           -37.5            83.1 -1926            False
+Jan-19  Furniture   11500            0.88         21257           124.4           184.8  9757            False
+Feb-19  Furniture   11600            0.87         16262           -23.5           140.2  4662            False
+Mar-19  Furniture   11800            1.72         16659             2.4           141.2  4859             True
+
+Months target met: 4 of 12
+
+Quarterly view:
+              target  actual  attainment_pct
+Quarter                                     
+Q1 (Apr-Jun)   31500   19873            63.1
+Q2 (Jul-Sep)   32700   21725            66.4
+Q3 (Oct-Dec)   33800   31405            92.9
+Q4 (Jan-Mar)   34900   54178           155.2
+
+Annual attainment, all categories:
+             annual_target  annual_actual  attainment_pct
+Category                                                 
+Clothing            174000         139054            79.9
+Electronics         129000         165267           128.1
+Furniture           132900         127181            95.7
+
+=== Part 3: top 5 states by order count ===
+                orders  total_sales  total_profit  avg_profit_per_order  profit_margin_pct  avg_order_value  share_of_orders_pct
+State                                                                                                                           
+Madhya Pradesh     101       105140          5551                 54.96               5.28          1040.99                 20.2
+Maharashtra         90        95348          6176                 68.62               6.48          1059.42                 18.0
+Rajasthan           32        21149          1257                 39.28               5.94           660.91                  6.4
+Gujarat             27        21058           465                 17.22               2.21           779.93                  5.4
+Punjab              25        16786          -609                -24.36              -3.63           671.44                  5.0
+
+Top-2 share of orders: 38.2% | of sales: 46.5% | of profit: 49.0%
+
+Profit by category inside the top 5 states:
+Category        Clothing  Electronics  Furniture
+State                                           
+Gujarat              362          158        -55
+Madhya Pradesh      1061         3799        691
+Maharashtra         2516         2611       1049
+Punjab              1452        -2132         71
+Rajasthan            450          202        605
+
+Worst sub-categories in Punjab:
+Sub-Category
+Phones             -1480
+Electronic Games    -794
+Chairs               -90
+Name: Profit, dtype: int64
+
+Worst sub-categories in Gujarat:
+Sub-Category
+Bookcases   -765
+Saree       -398
+Printers    -209
+Name: Profit, dtype: int64
+
+Worst sub-categories in Tamil Nadu:
+Sub-Category
+Tables      -1864
+Chairs       -392
+Bookcases    -338
+Name: Profit, dtype: int64
+
+All states:
+                   orders  total_sales  total_profit  avg_profit_per_order  profit_margin_pct  avg_order_value  share_of_orders_pct
+State                                                                                                                              
+Madhya Pradesh        101       105140          5551                 54.96               5.28          1040.99                 20.2
+Maharashtra            90        95348          6176                 68.62               6.48          1059.42                 18.0
+Rajasthan              32        21149          1257                 39.28               5.94           660.91                  6.4
+Gujarat                27        21058           465                 17.22               2.21           779.93                  5.4
+Punjab                 25        16786          -609                -24.36              -3.63           671.44                  5.0
+Delhi                  22        22531          2987                135.77              13.26          1024.14                  4.4
+West Bengal            22        14086          2500                113.64              17.75           640.27                  4.4
+Uttar Pradesh          22        22359          3237                147.14              14.48          1016.32                  4.4
+Karnataka              21        15058           645                 30.71               4.28           717.05                  4.2
+Kerala                 16        13459          1871                116.94              13.90           841.19                  3.2
+Bihar                  16        12943          -321                -20.06              -2.48           808.94                  3.2
+Andhra Pradesh         15        13256          -496                -33.07              -3.74           883.73                  3.0
+Nagaland               15        11903           148                  9.87               1.24           793.53                  3.0
+Haryana                14         8863          1325                 94.64              14.95           633.07                  2.8
+Himachal Pradesh       14         8666           656                 46.86               7.57           619.00                  2.8
+Jammu and Kashmir      14        10829             8                  0.57               0.07           773.50                  2.8
+Goa                    14         6705           370                 26.43               5.52           478.93                  2.8
+Sikkim                 12         5276           401                 33.42               7.60           439.67                  2.4
+Tamil Nadu              8         6087         -2216               -277.00             -36.41           760.88                  1.6
+
+Cities, lowest profit first:
+                                      orders  total_sales  total_profit  avg_profit_per_order  profit_margin_pct                   label
+State             City                                                                                                                  
+Tamil Nadu        Chennai                  8         6087         -2216               -277.00             -36.41                 Chennai
+Punjab            Chandigarh              16        12279         -1153                -72.06              -9.39     Chandigarh (Punjab)
+Gujarat           Ahmedabad               17        14230          -880                -51.76              -6.18               Ahmedabad
+Rajasthan         Jaipur                  19        10076          -753                -39.63              -7.47                  Jaipur
+Andhra Pradesh    Hyderabad               15        13256          -496                -33.07              -3.74               Hyderabad
+Bihar             Patna                   16        12943          -321                -20.06              -2.48                   Patna
+Jammu and Kashmir Kashmir                 14        10829             8                  0.57               0.07                 Kashmir
+Nagaland          Kohima                  15        11903           148                  9.87               1.24                  Kohima
+Uttar Pradesh     Lucknow                 13         5502           156                 12.00               2.84                 Lucknow
+Goa               Goa                     14         6705           370                 26.43               5.52                     Goa
+Sikkim            Gangtok                 12         5276           401                 33.42               7.60                 Gangtok
+Madhya Pradesh    Delhi                    3         2488           521                173.67              20.94  Delhi (Madhya Pradesh)
+Punjab            Amritsar                 9         4507           544                 60.44              12.07                Amritsar
+Karnataka         Bangalore               21        15058           645                 30.71               4.28               Bangalore
+Himachal Pradesh  Simla                   14         8666           656                 46.86               7.57                   Simla
+Madhya Pradesh    Bhopal                  22        23583           871                 39.59               3.69                  Bhopal
+Haryana           Chandigarh              14         8863          1325                 94.64              14.95    Chandigarh (Haryana)
+Gujarat           Surat                   10         6828          1345                134.50              19.70                   Surat
+Maharashtra       Mumbai                  68        61867          1637                 24.07               2.65                  Mumbai
+Kerala            Thiruvananthapuram      16        13459          1871                116.94              13.90      Thiruvananthapuram
+Rajasthan         Udaipur                 13        11073          2010                154.62              18.15                 Udaipur
+West Bengal       Kolkata                 22        14086          2500                113.64              17.75                 Kolkata
+Delhi             Delhi                   22        22531          2987                135.77              13.26                   Delhi
+Uttar Pradesh     Allahabad                9        16857          3081                342.33              18.28               Allahabad
+Madhya Pradesh    Indore                  76        79069          4159                 54.72               5.26                  Indore
+Maharashtra       Pune                    22        33481          4539                206.32              13.56                    Pune
+
+FIX    : ['Chennai', 'Chandigarh (Punjab)', 'Ahmedabad', 'Jaipur', 'Hyderabad', 'Patna']
+GROW   : ['Amritsar', 'Chandigarh (Haryana)', 'Surat', 'Thiruvananthapuram', 'Udaipur', 'Kolkata', 'Delhi', 'Allahabad', 'Pune']
+PROTECT: ['Mumbai', 'Indore']
+
+Done. Tables in outputs/tables, charts in outputs/figures.

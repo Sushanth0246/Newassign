@@ -1,0 +1,27 @@
+State,City,orders,total_sales,total_profit,avg_profit_per_order,profit_margin_pct,label
+Tamil Nadu,Chennai,8,6087,-2216,-277.0,-36.41,Chennai
+Punjab,Chandigarh,16,12279,-1153,-72.06,-9.39,Chandigarh (Punjab)
+Gujarat,Ahmedabad,17,14230,-880,-51.76,-6.18,Ahmedabad
+Rajasthan,Jaipur,19,10076,-753,-39.63,-7.47,Jaipur
+Andhra Pradesh,Hyderabad,15,13256,-496,-33.07,-3.74,Hyderabad
+Bihar,Patna,16,12943,-321,-20.06,-2.48,Patna
+Jammu and Kashmir,Kashmir,14,10829,8,0.57,0.07,Kashmir
+Nagaland,Kohima,15,11903,148,9.87,1.24,Kohima
+Uttar Pradesh,Lucknow,13,5502,156,12.0,2.84,Lucknow
+Goa,Goa,14,6705,370,26.43,5.52,Goa
+Sikkim,Gangtok,12,5276,401,33.42,7.6,Gangtok
+Madhya Pradesh,Delhi,3,2488,521,173.67,20.94,Delhi (Madhya Pradesh)
+Punjab,Amritsar,9,4507,544,60.44,12.07,Amritsar
+Karnataka,Bangalore,21,15058,645,30.71,4.28,Bangalore
+Himachal Pradesh,Simla,14,8666,656,46.86,7.57,Simla
+Madhya Pradesh,Bhopal,22,23583,871,39.59,3.69,Bhopal
+Haryana,Chandigarh,14,8863,1325,94.64,14.95,Chandigarh (Haryana)
+Gujarat,Surat,10,6828,1345,134.5,19.7,Surat
+Maharashtra,Mumbai,68,61867,1637,24.07,2.65,Mumbai
+Kerala,Thiruvananthapuram,16,13459,1871,116.94,13.9,Thiruvananthapuram
+Rajasthan,Udaipur,13,11073,2010,154.62,18.15,Udaipur
+West Bengal,Kolkata,22,14086,2500,113.64,17.75,Kolkata
+Delhi,Delhi,22,22531,2987,135.77,13.26,Delhi
+Uttar Pradesh,Allahabad,9,16857,3081,342.33,18.28,Allahabad
+Madhya Pradesh,Indore,76,79069,4159,54.72,5.26,Indore
+Maharashtra,Pune,22,33481,4539,206.32,13.56,Pune

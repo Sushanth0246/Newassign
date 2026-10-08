@@ -1,0 +1,4 @@
+Category,orders,line_items,total_sales,total_profit,avg_profit_per_order,profit_margin_pct,avg_order_value,loss_making_items_pct
+Clothing,393,949,139054,11163,28.4,8.03,353.83,29.4
+Electronics,204,308,165267,10494,51.44,6.35,810.13,39.6
+Furniture,186,243,127181,2298,12.35,1.81,683.77,42.0

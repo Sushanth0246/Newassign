@@ -1,0 +1,6 @@
+State,orders,total_sales,total_profit,avg_profit_per_order,profit_margin_pct,avg_order_value,share_of_orders_pct
+Madhya Pradesh,101,105140,5551,54.96,5.28,1040.99,20.2
+Maharashtra,90,95348,6176,68.62,6.48,1059.42,18.0
+Rajasthan,32,21149,1257,39.28,5.94,660.91,6.4
+Gujarat,27,21058,465,17.22,2.21,779.93,5.4
+Punjab,25,16786,-609,-24.36,-3.63,671.44,5.0

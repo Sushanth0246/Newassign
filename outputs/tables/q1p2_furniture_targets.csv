@@ -1,0 +1,13 @@
+Month,Category,Target,target_mom_pct,actual_sales,actual_mom_pct,attainment_pct,gap,big_target_move
+Apr-18,Furniture,10400,,8121,,78.1,-2279,False
+May-18,Furniture,10500,0.96,6220,-23.4,59.2,-4280,False
+Jun-18,Furniture,10600,0.95,5532,-11.1,52.2,-5068,False
+Jul-18,Furniture,10800,1.89,3483,-37.0,32.2,-7317,True
+Aug-18,Furniture,10900,0.93,9538,173.8,87.5,-1362,False
+Sep-18,Furniture,11000,0.92,8704,-8.7,79.1,-2296,False
+Oct-18,Furniture,11100,0.91,6766,-22.3,61.0,-4334,False
+Nov-18,Furniture,11300,1.8,15165,124.1,134.2,3865,True
+Dec-18,Furniture,11400,0.88,9474,-37.5,83.1,-1926,False
+Jan-19,Furniture,11500,0.88,21257,124.4,184.8,9757,False
+Feb-19,Furniture,11600,0.87,16262,-23.5,140.2,4662,False
+Mar-19,Furniture,11800,1.72,16659,2.4,141.2,4859,True
